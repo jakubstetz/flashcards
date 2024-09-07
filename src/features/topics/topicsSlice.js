@@ -9,6 +9,11 @@ export const topicsSlice = createSlice({
     addTopic: (state, {payload: {id, name, icon}}) => {
       state.topics[id] = {id, name, icon, quizIds: []};
     }
+  },
+  extraReducers: {
+    addQuiz: (state, {payload: {id, topicId}}) => {
+      state.topics[topicId].quizIds.push(id);
+    }
   }
 });
 

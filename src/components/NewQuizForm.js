@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import ROUTES from "../app/routes";
 import { selectTopics } from "../features/topics/topicsSlice"; // My contribution.
-import { useSelector } from "react-redux"; // My contribution.
+import { addQuiz } from "../features/quizzes/quizzesSlice"; // My contribution.
 
 export default function NewQuizForm() {
   const [name, setName] = useState("");
@@ -27,7 +27,7 @@ export default function NewQuizForm() {
 
     const quizId = uuidv4();
 
-    // dispatch add quiz action
+    dispatch(addQuiz({id: quizId, name, topicId, cardIds})); // My contribution.
 
     navigate(ROUTES.quizzesRoute())
   };

@@ -4,7 +4,7 @@ import {useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import ROUTES from "../app/routes";
 import { ALL_ICONS } from "../data/icons";
-// import addTopic
+import { addTopic } from "../features/topics/topicsSlice"; // My contribution.
 
 export default function NewTopicForm() {
   const dispatch = useDispatch();
@@ -18,7 +18,7 @@ export default function NewTopicForm() {
       return;
     }
 
-    // dispatch new topic
+    dispatch(addTopic({name, id: uuidv4(), icon: icon.value})); // My contribution. LESSON LEARNED: Don't forget to call the dispatch function with actual arguments!
     navigate(ROUTES.topicsRoute());
   };
 

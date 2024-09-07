@@ -23,11 +23,11 @@ export default function NewQuizForm() {
 
     const cardIds = [];
 
-    cards.forEach(({front, back}) => {
+    cards.forEach(({front, back}) => { // My contribution.
       const id = uuidv4();
       dispatch(addCard({id, front, back}));
       cardIds.push(id);
-    }) // My contribution.
+    })
 
     const quizId = uuidv4();
 

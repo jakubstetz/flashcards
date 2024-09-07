@@ -18,7 +18,7 @@ export default function NewTopicForm() {
       return;
     }
 
-    dispatch(addTopic({name, id: uuidv4(), icon: icon.value})); // My contribution. LESSON LEARNED: Don't forget to call the dispatch function with actual arguments!
+    dispatch(addTopic({name, id: uuidv4(), icon})); // My contribution. LESSON LEARNED: Don't forget to call the dispatch function with actual arguments!
     navigate(ROUTES.topicsRoute());
   };
 

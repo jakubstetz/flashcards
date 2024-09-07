@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ROUTES from "../../app/routes";
-// import selector
+import { selectTopics } from "./topicsSlice"; // My contribution.
 
 export default function Topics() {
-  const topics = {}; // replace this with a call to your selector to select all the topics in state
+  const topics = selectTopics(); // My contribution.
 
   return (
     <section className="center">

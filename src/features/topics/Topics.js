@@ -2,9 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ROUTES from "../../app/routes";
 import { selectTopics } from "./topicsSlice"; // My contribution.
+import { useSelector } from "react-redux"; // My contribution.
 
 export default function Topics() {
-  const topics = selectTopics(); // My contribution.
+  const topics = useSelector(selectTopics); // My contribution. LESSON LEARNED: I was running into errors, and it turned out to be because I was using the selector directly in this constant declaration; I had forgotten to use useSelector().
 
   return (
     <section className="center">

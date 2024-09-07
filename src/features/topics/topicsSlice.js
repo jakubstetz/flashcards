@@ -14,7 +14,7 @@ export const topicsSlice = createSlice({
 });
 
 // Selector
-export const selectTopics = state => state.topics;
+export const selectTopics = state => state.topics.topics;
 
 // Exports from Slice
 export const { addTopic } = topicsSlice.actions;

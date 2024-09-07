@@ -1,3 +1,4 @@
+// This whole file is my contribution.
 import { createSlice } from "@reduxjs/toolkit";
 
 // Slice Object
